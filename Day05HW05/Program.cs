@@ -1,4 +1,5 @@
-﻿using Day05HW05.Entities;
+﻿using Day05HW05.Concrete;
+using Day05HW05.Entities;
 using Day05HW05.Manager;
 using System;
 
@@ -39,6 +40,14 @@ namespace Day05HW05
 
 
             gameManager.List();
+
+            PlayerManager playerManager = new PlayerManager(new UserValidationManager());
+            playerManager.Add(new Player() { TcNo = 1234567890, BirthYear = 1979, FirstName = "Serkan", Surname = "Okur" });
+            playerManager.Add(new Player() { TcNo = 123456789, BirthYear = 1985, FirstName = "Erkan", Surname = "Okur" });
+            playerManager.Add(new Player() { TcNo = 1234567890, BirthYear = 2012, FirstName = "Uzay", Surname = "Okur" });
+
+            playerManager.List();
+
         }
     }
 }

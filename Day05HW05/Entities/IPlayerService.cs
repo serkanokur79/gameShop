@@ -10,5 +10,6 @@ namespace Day05HW05.Entities
         void CheckIfRealPerson();
         void Add(Player player);
         void Remove(Player player);
+        void List();
     }
 }
